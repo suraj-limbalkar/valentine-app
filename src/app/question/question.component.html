@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card">
+    <h1 class="question">Will you be my Valentine? ❤️</h1>
+    
+    <div class="button-container">
+      <button class="btn btn-yes" (click)="onYesClick()">YES</button>
+      <button 
+        #noButton
+        class="btn btn-no" 
+        (mouseenter)="onNoHover($event)"
+      >
+        NO
+      </button>
+    </div>
+  </div>
+</div>

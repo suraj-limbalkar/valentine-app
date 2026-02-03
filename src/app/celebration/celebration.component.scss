@@ -1,0 +1,138 @@
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes heartFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.celebration-card {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+  z-index: 10;
+  animation: float 3s ease-in-out infinite;
+}
+
+.message {
+  font-size: 48px;
+  color: #e74c3c;
+  margin: 0 0 30px 0;
+  font-weight: 700;
+  animation: float 3s ease-in-out infinite;
+}
+
+.gif-container {
+  margin: 30px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.celebration-gif {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.submessage {
+  font-size: 24px;
+  color: #333;
+  margin: 30px 0;
+  font-weight: 500;
+}
+
+.btn-back {
+  padding: 12px 30px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 20px;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heart {
+  position: fixed;
+  left: 0;
+  font-size: 30px;
+  animation: heartFall 3s linear forwards;
+
+  &:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    font-size: 25px;
+  }
+
+  &:nth-child(2) {
+    left: 25%;
+    animation-delay: 0.5s;
+    font-size: 35px;
+  }
+
+  &:nth-child(3) {
+    left: 50%;
+    animation-delay: 1s;
+    font-size: 28px;
+  }
+
+  &:nth-child(4) {
+    left: 70%;
+    animation-delay: 1.5s;
+    font-size: 32px;
+  }
+
+  &:nth-child(5) {
+    left: 85%;
+    animation-delay: 2s;
+    font-size: 26px;
+  }
+}
