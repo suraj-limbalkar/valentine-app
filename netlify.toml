@@ -1,0 +1,7 @@
+[build]
+  command = "ng build"
+  publish = "dist/valentine-app"
+
+[dev]
+  command = "ng serve"
+  port = 4200
